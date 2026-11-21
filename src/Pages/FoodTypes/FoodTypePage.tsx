@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import FormField from "../../Helper/FormField";
 
-const API = "http://localhost:3001";
+const API = import.meta.env.VITE_API_URL;
 
 type FoodTypeData = {
   id: number;
@@ -85,23 +86,32 @@ const FoodTypePage = () => {
       <h2>Food Types</h2>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Food type name</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Enter food type name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+
+
+
+
+       
+
+       <FormField label="Food type name" type="text" id="name" name="name"
+          placeholder="Enter food type name" value={name} onChange={(e) => setName(e.target.value)} />
+
+
+
+
         <button type="submit">{editingId !== null ? "Update" : "Add"}</button>
         {editingId !== null && (
           <button type="button" onClick={resetForm}>
             Cancel
           </button>
         )}
+   
+   
+   
+   
+   
       </form>
+
+
 
       {error && <p style={{ color: "red" }}>{error}</p>}
 
