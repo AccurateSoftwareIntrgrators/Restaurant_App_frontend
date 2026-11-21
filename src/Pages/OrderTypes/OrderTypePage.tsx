@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import FormField from "../../Helper/FormField";
 
-const API = "http://localhost:3001";
+const API = import.meta.env.VITE_API_URL;
 
 type OrderTypeData = {
   id: number;
@@ -85,16 +86,16 @@ const OrderTypePage = () => {
       <h2>Order Types</h2>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Order type name</label>
-        <input
+        <FormField
+          label="Order type name"
+          type="text"
           id="name"
           name="name"
-          type="text"
           placeholder="Enter order type name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          required
         />
+
         <button type="submit">{editingId !== null ? "Update" : "Add"}</button>
         {editingId !== null && (
           <button type="button" onClick={resetForm}>

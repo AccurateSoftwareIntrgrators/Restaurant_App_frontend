@@ -3,7 +3,7 @@ import axios from "axios";
 import FormField from "./FormField";
 import FormSelect from "./FormSelect";
 
-const API = "http://localhost:3001";
+const API = import.meta.env.VITE_API_URL;
 
 type Option = { id: number; name: string };
 
