@@ -197,7 +197,6 @@ const Employee = () => {
             value={form.employeeId}
             onChange={handleChange}
             disabled={editingId !== null}
-            required
           />
           <FormField
             label="Name"
@@ -207,7 +206,6 @@ const Employee = () => {
             placeholder="Enter name"
             value={form.name}
             onChange={handleChange}
-            required
           />
           <FormField
             label="Email"
@@ -217,7 +215,6 @@ const Employee = () => {
             placeholder="Enter email"
             value={form.email}
             onChange={handleChange}
-            required
           />
           <FormField
             label="National ID"
@@ -227,7 +224,6 @@ const Employee = () => {
             placeholder="Enter national ID"
             value={form.nationalId}
             onChange={handleChange}
-            required
           />
           <FormField
             label="Phone"
@@ -237,7 +233,6 @@ const Employee = () => {
             placeholder="Enter phone number"
             value={form.phone}
             onChange={handleChange}
-            required
           />
           <FormField
             label="Address"
@@ -265,7 +260,6 @@ const Employee = () => {
             placeholder="Enter salary"
             value={form.salary}
             onChange={handleChange}
-            required
           />
           <FormField
             label="Employment Date"
@@ -275,7 +269,6 @@ const Employee = () => {
             placeholder=""
             value={form.employmentDate}
             onChange={handleChange}
-            required
           />
 
           <div>

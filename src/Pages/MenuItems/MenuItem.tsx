@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import FormField from "./FormField";
-import FormSelect from "./FormSelect";
+import FormField from "../../Helper/FormField";
+import FormSelect from "../../Helper/FormSelect";
 
 const API = import.meta.env.VITE_API_URL;
 
