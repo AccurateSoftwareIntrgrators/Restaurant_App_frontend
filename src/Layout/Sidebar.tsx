@@ -16,6 +16,11 @@ const Links: SidebarLink[] = [
   { id: 6, label: "Employee", path: "/employees", icon: "person" },
   { id: 7, label: "Employee Type", path: "/employee-types", icon: "people" },
   { id: 8, label: "Position", path: "/positions", icon: "work" },
+  { id: 9, label: "Inventory", path: "/inventory-items", icon: "inventory_2" },
+  { id: 10, label: "Stock Movements", path: "/stock-transactions", icon: "swap_vert" },
+  { id: 11, label: "Inventory Categories", path: "/inventory-categories", icon: "category" },
+  { id: 12, label: "Units", path: "/units", icon: "straighten" },
+  { id: 13, label: "Suppliers", path: "/suppliers", icon: "local_shipping" },
 ];
 
 const Sidebar = () => {
